@@ -1,0 +1,29 @@
+2020/10/23
+Issue#1:
+ModuleNotFoundError: No module named SQLite
+- found when trying to run databaseIssues.py for the first time on the command line
+- solved by - read through some google searches and found one that indicated that sqlite3 is what python calls the library they use to connect to sqlite.  This prompted me to realize that it should NOT be what the sqlite folder or file is called on the pc.  It must be exactly sqlite3 (all lowercase for import and connection).
+
+2020/10/24 
+Issue#2:
+Not all tables would create when code executed.
+- found only the first table was created while the others were not.
+- solved by - searched and found documentation and forums that showed sqlite only allows one table to be created at a time per connection.  Opening and closing a connection on every table is required for multiple tables to be created. 
+
+2020/10/25
+Issue#3
+Could not add a record to the departments table in the database. 
+Two errors caused this: 
+1st - it would not recognize the column name
+2nd - it would not populate the id column automatically
+- solved by 
+- corrected syntax to have a comma after the parameter that was called in.
+- recreated the table to have integer instead of int as the data type. applied correction to all tables in database.
+
+Issue#4
+cannot delete record 1 from issue table in issue database.  Need to delete as 1st record with wrong date format causing the database to show 1987 instead of the correct date.
+solution - 
+- finish adding records to remaining tables that way references that are erroring will have something to reference.  
+- double check once this is done.
+
+
